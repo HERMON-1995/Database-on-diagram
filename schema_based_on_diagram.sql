@@ -22,6 +22,11 @@ CREATE TABLE treatments (
   FOREIGN KEY (id) REFERENCES medical_histories(id)
 );
 
+CREATE TABLE history_treatment (
+  id INT SERIAL,
+  medical_histories_id INT REFERENCES medical_histories(id)
+);
+
 CREATE TABLE invoices (
   id INT,
   total_amount DECIMAL,
