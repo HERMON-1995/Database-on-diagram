@@ -24,7 +24,8 @@ CREATE TABLE treatments (
 
 CREATE TABLE history_treatment (
   id INT SERIAL,
-  medical_histories_id INT REFERENCES medical_histories(id)
+  medical_histories_id INT REFERENCES medical_histories(id),
+  fk-treatments INT REFERENCES treatments(id)
 );
 
 CREATE TABLE invoices (
