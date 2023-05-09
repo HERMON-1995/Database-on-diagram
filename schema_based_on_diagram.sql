@@ -25,7 +25,7 @@ CREATE TABLE history_treatment (
   id SERIAL PRIMARY KEY,
   medical_histories_id INT,
   treatment_id INT,
-  FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id),
+  FOREIGN KEY (medical_histories_id) REFERENCES medical_histories(id),
   FOREIGN KEY (treatment_id) REFERENCES treatments(id),
 );
 
