@@ -18,14 +18,13 @@ CREATE TABLE treatments (
   id INT,
   type VARCHAR,
   name VARCHAR,
-  PRIMARY KEY (id),
-  FOREIGN KEY (id) REFERENCES medical_histories(id)
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE history_treatment (
-  id INT SERIAL,
+  id SERIAL PRIMARY KEY,
   medical_histories_id INT REFERENCES medical_histories(id),
-  fk-treatments INT REFERENCES treatments(id)
+  treatment_id INT REFERENCES treatments(id)
 );
 
 CREATE TABLE invoices (
